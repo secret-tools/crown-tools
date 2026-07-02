@@ -165,3 +165,17 @@ root@void:~# star --required
 <sub><code>// encrypted by 1s0e · void layer · 2026 · star the repo — your eyes are next</code></sub>
 
 </div>
+
+## Contributing
+
+We welcome contributions to Secret-Tools! If you would like to contribute, please follow these steps:
+
+1. **Fork the repository**: Click the 'Fork' button at the top right of the page.
+2. **Clone your fork**: Use `git clone <your-fork-url>` to clone your fork to your local machine.
+3. **Create a branch**: Create a new branch for your changes using `git checkout -b your-branch-name`.
+4. **Make your changes**: Implement your changes or additions.
+5. **Commit your changes**: Use `git commit -m "Your commit message"` to commit your changes.
+6. **Push to GitHub**: Push your changes to your fork using `git push origin your-branch-name`.
+7. **Open a pull request**: Go to the original repository and click on 'Pull Requests', then 'New Pull Request'. Select your branch and submit your pull request.
+
+Thank you for contributing!
