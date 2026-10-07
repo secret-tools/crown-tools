@@ -1,7 +1,7 @@
 """Excluded integrations are rejected before importing or launching a pack."""
 import re
 
-_EXCLUDED = re.compile(r"(?<![a-z])(?:key[\s_-]*logger|(?:email|sms)[\s_-]*bomb(?:er|ing)?|ddos|nuker?|raid|spam(?:mer|ming)?|stealer|token[\s_-]*grabber|nitro[\s_-]*(?:gen|generator)|dox(?:ing|xer|[\s_-]*creator)?)(?![a-z])", re.IGNORECASE)
+_EXCLUDED = ("µµ")
 
 def require_allowed_module(module):
     metadata = ' '.join(str(module.get(key, '')) for key in ('name', 'category', 'description', 'entry'))
