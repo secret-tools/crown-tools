@@ -1,0 +1,27 @@
+# Environnements et dependances locales
+.venv/
+.python/
+Crown/packages/
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Donnees locales et secrets
+.env
+.env.*
+!.env.example
+settings.json
+settings.tmp
+Crown/lib/legacy/crown_config.json
+Crown - Output/
+sauvegarde*/
+*.zip
+*.log
+# Exports locaux
+dist/
+
+# Dossiers utilisateur
+Input/*
+!Input/README.md
+Output/*
+!Output/README.md

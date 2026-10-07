@@ -1,0 +1,32 @@
+# --- Core Interface & TUI Dashboard ---
+textual==8.2.8
+rich==15.0.0
+pyfiglet==1.0.4
+psutil==7.2.2
+colorama>=0.4.6
+
+# --- Localization & Font Rendering ---
+arabic-reshaper==3.0.0
+python-bidi==0.6.6
+
+# --- Graphics & Intro Engine ---
+pillow==12.3.0
+numpy==2.5.3
+qrcode==8.2
+
+# --- Networking, Async & HTTP ---
+requests==2.34.2
+urllib3>=2.2.1
+aiohttp>=3.9.5
+dnspython==2.8.0
+certifi>=2024.2.2
+charset-normalizer>=3.3.2
+
+# --- Web Scraping & Forensics ---
+beautifulsoup4>=4.12.3
+phonenumbers>=8.13.35
+holehe>=1.61
+
+# --- Security, Cryptography & Cracking ---
+pyzipper>=0.4.0
+packaging>=24.0

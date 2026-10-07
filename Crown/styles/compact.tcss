@@ -1,0 +1,280 @@
+Screen {background:$crown-bg; color:$crown-text;}
+* {scrollbar-color:$crown-accent-2; scrollbar-color-hover:$crown-accent; scrollbar-color-active:$crown-accent; scrollbar-background:$crown-bg; scrollbar-size:1 1;}
+#topline {display:none;}
+.tool-topline {height:1;background:$crown-bg-alt;color:$crown-text-dim;}
+#hero {height:5;margin:0 2;border-bottom:solid $crown-border;background:$crown-bg;}
+#identity {width:1fr;padding:1 1 0 1;}
+#dashboard-brand {width:19;height:3;color:$crown-accent;margin-top:0;}
+#brand-caption {width:1fr;margin:0 0 0 2;}
+#brand-tools {height:1;color:$crown-text;text-style:bold;}
+#hero-tagline {height:1;color:$crown-text-dim;}
+#hero-right {width:29;content-align:right middle;padding-top:2;}
+#signature {height:1;text-align:right;color:$crown-text-dim;}
+#workspace {height:1fr;min-height:8;margin:0 2;}
+#navigation {width:23;padding:1 1 0 0;border-right:solid $crown-border;}
+#category-scroll {height:1fr;min-height:4;}
+.eyebrow {height:1;color:$crown-text-dim;margin:0 1 1 1;}
+.nav-button {width:100%;height:2;min-width:0;text-align:left;content-align:left middle;background:transparent;color:$crown-text-dim;border:none !important;border-left:thick transparent !important;padding:0 1;margin:0;text-style:none;}
+.nav-button:hover,.nav-button:focus {background:$crown-bg-alt;color:$crown-text;border:none !important;border-left:thick transparent !important;}
+.nav-button.chosen {border-left:thick $crown-accent !important;background:$crown-bg-alt;color:$crown-accent;text-style:bold;}
+.separator {height:1;color:$crown-border;margin:0 1;}
+#telemetry {height:9;margin:1 1 0 1;display:none;}
+#sidebar-end {display:none;}
+#catalog {width:1fr;padding:0 1;}
+#catalog-heading {height:1;margin-top:1;}
+#collection-title {width:1fr;color:$crown-text;text-style:bold;}
+#collection-count {width:11;text-align:right;color:$crown-accent;}
+#collection-subtitle {height:2;color:$crown-text-dim;padding:0;}
+#cards-scroll {height:1fr;}
+#cards {height:auto;grid-size:3;grid-gutter:1 2;grid-rows:5;padding:0 1 1 0;}
+.module-card {height:5;border:round $crown-border;background:$crown-bg-alt;padding:0 1;overflow:hidden;}
+#pagination {height:1;margin:0 0 1 0;align:center middle;}
+#pagination Button {height:1;width:4;min-width:4;border:none !important;background:$crown-bg-alt;color:$crown-accent;padding:0;}
+#page-label {width:1fr;height:1;text-align:center;color:$crown-text-dim;}
+.module-card:hover {border:round $crown-accent-2;}
+.module-card:focus {border:round $crown-accent;background:$crown-accent 8%;}
+.module-card.premium-card {border:round #8a6d1b;background:#130f04;}
+.module-card.premium-card:hover {border:round #ffd700;background:#201805;}
+.module-card.premium-card:focus {border:round #ffd700;background:#2b2106;}
+#scroll-hint {height:1;margin-top:1;color:$crown-text-dim;text-align:right;}
+#cards-scroll {scrollbar-size-vertical:1;scrollbar-gutter:stable;}
+Button {text-style:none;}
+Button.-active {tint:transparent;}
+Button:focus {text-style:bold;}
+#tool-toolbar {border:round $crown-border !important;}
+#tool-toolbar Button {border:round $crown-border !important;background:$crown-bg-alt;}
+#tool-toolbar Button:focus,#tool-toolbar Button:hover {border:round $crown-accent !important;}
+#inspector {width:27;border-left:solid $crown-border;padding:1 0 0 1;}
+#inspector-tag {height:1;color:$crown-text-dim;}
+#detail-orbit {display:none;}
+#detail-number {height:1;color:$crown-accent;margin-top:1;}
+#detail-name {height:auto;min-height:1;max-height:2;text-style:bold;color:$crown-text;margin-top:1;}
+#detail-description {height:auto;max-height:7;color:$crown-text-dim;margin-top:1;}
+#detail-meta {height:3;color:$crown-text-dim;margin-top:1;}
+#detail-open {height:3;min-width:0;width:100%;background:$crown-accent-2;color:$crown-text;content-align:center middle;}
+#detail-caption {display:none;}
+#footer {height:2;background:$crown-bg-alt;border-top:solid $crown-border;color:$crown-text-dim;}
+.narrow #inspector {display:none;}
+.compact #navigation {width:21;}
+.compact #hero-right {display:none;}
+.compact #brand-caption {margin-left:1;}
+.compact #hero-tagline {display:none;}
+.compact #catalog {padding:0 1;}
+.compact #workspace {margin:0 1;}
+.compact #collection-subtitle {height:2;}
+.short #hero {height:5;}
+.short #dashboard-brand {margin-top:0;}
+.short #brand-caption {margin-top:0;}
+.short #hero-right {padding-top:1;}
+.short #telemetry {display:none;}
+.short #workspace {margin-top:0;margin-bottom:0;}
+.short #navigation {padding-top:1;}
+.short .nav-button {height:2;}
+.short #detail-meta {display:none;}
+BootScreen {align:center middle;background:#000000;}
+#boot-eyebrow {dock:top;layer:overlay;height:1;text-align:center;color:$crown-text-dim;margin:1 0;background:#000000;}
+#neon-canvas {width:100%;height:100%;background:#000000;content-align:center middle;}
+#boot-skip {dock:bottom;layer:overlay;height:1;text-align:center;color:$crown-accent;margin:1 0 2 0;background:#000000;}
+AppearanceScreen,SearchScreen {align:center middle;background:$crown-bg 85%;}
+#appearance-box {width:64;max-width:95%;height:auto;max-height:95%;border:round $crown-accent;background:$crown-bg-alt;padding:1 3;overflow-y:auto;}
+#appearance-title {height:2;color:$crown-text;text-style:bold;margin-bottom:1;}
+#appearance-box Button {width:100%;height:3;background:$crown-bg;margin-bottom:0;color:$crown-text;content-align:left middle;}
+#appearance-box Button:hover,#appearance-box Button:focus {background:$crown-accent-2;}
+#search-box {width:82;max-width:95%;height:auto;max-height:90%;border:round $crown-accent;background:$crown-bg-alt;padding:1 2;}
+#search-input {height:3;border:round $crown-border;background:$crown-bg;}
+#search-input:focus {border:round $crown-accent;}
+#search-results {height:auto;max-height:16;margin:1 0;}
+#search-results ListItem {height:2;padding:0 1;}
+.search-hint {height:1;color:$crown-text-dim;}
+#tool-toolbar {border:round $crown-border;background:$crown-bg-alt;margin:1 2 0 2;padding:0 1;height:auto;}
+#title-row {height:3;padding:0;}
+#screen-title {width:1fr;height:3;content-align:left middle;margin-left:2;}
+#tool-context {height:auto;color:$crown-text-dim;margin:0 1 1 1;}
+#input-row {padding:0;}
+#tool-input {border:round $crown-border;background:$crown-bg;color:$crown-text;}
+#tool-input:focus {border:round $crown-accent;}
+#run-btn {background:$crown-accent-2;color:$crown-text;width:18;}
+#terminal-btn {background:$crown-bg;color:$crown-text-dim;width:18;}
+#terminal-btn:hover,#terminal-btn:focus {border:round $crown-accent !important;color:$crown-text;}
+#run-terminal-btn {background:$crown-accent-2;color:$crown-text;width:34;}
+#back-btn {background:$crown-bg;color:$crown-text-dim;}
+#result-scroll {margin:1 2;border:round $crown-border;padding:1;}
+#tool-empty {height:auto;text-align:center;color:$crown-text-dim;margin-top:2;}
+.tool-footnote {height:1;color:$crown-text-dim;background:$crown-bg-alt;}
+.compact-tool #tool-context {display:none;}
+.compact-tool #tool-toolbar {margin:0 1;padding:0 1;}
+.compact-tool #result-scroll {margin:0 1;padding:0 1;}
+Toast,Toast.toast-success,Toast.toast-error {height:1;min-height:1;max-height:1;padding:0 1;margin:0 1;border:none;background:$crown-bg-alt;dock:bottom;}
+
+/* Signature: sculpted wordmark, quiet typography and orbital emblem. */
+#hero {height:8;margin:0 2;border-bottom:solid $crown-border;}
+#identity {padding:1 1 0 1;}
+#dashboard-brand {width:33;height:6;margin:0;}
+#brand-caption {margin:1 0 0 3;min-width:25;}
+#brand-tools {color:$crown-text;height:1;text-style:bold;}
+#hero-tagline {height:1;margin-top:1;color:$crown-text-dim;}
+#brand-rule {height:1;margin-top:1;color:$crown-accent-2;}
+#brand-orbit {width:18;height:5;margin:1 2 0 1;}
+#hero-right {width:22;padding:2 1 0 0;}
+#palette-label {height:1;color:$crown-accent-2;text-align:right;}
+#signature {height:2;margin-top:1;text-align:right;color:$crown-text-dim;}
+.short #hero {height:8;}
+.short #hero-right {padding-top:2;}
+.compact #brand-caption {margin:1 0 0 2;}
+.compact #hero-tagline {display:block;}
+.compact #brand-orbit {display:none;}
+.compact #hero-right {display:none;}
+
+/* Content-first masthead: 4 rows of half-block lettering, never stretched. */
+#hero {height:6;margin:0 2;}
+#dashboard-brand {width:27;height:4;}
+#brand-caption {margin:0 0 0 2;min-width:18;}
+#brand-tools {margin-top:0;}
+#hero-tagline {margin-top:1;}
+#brand-rule {display:none;}
+#hero-right {width:28;padding:0 1 0 1;margin-top:1;border-left:solid $crown-border;}
+#palette-label {height:1;color:$crown-text;text-style:bold;text-align:left;}
+#signature {height:1;margin:0;color:$crown-text-dim;text-align:left;}
+#edit-header-profile {height:1;min-width:0;width:100%;border:none !important;padding:0;margin-top:1;background:transparent;color:$crown-accent;text-align:left;}
+.compact #hero-right {display:block;width:24;}
+.compact #brand-caption {display:none;}
+.short #hero {height:6;}
+.short #hero-right {padding-top:0;}
+.tiny #hero {height:5;}
+.tiny #identity {padding-top:0;}
+.tiny #hero-right {margin-top:0;}
+.tiny #collection-subtitle {height:1;}
+#hero {max-height:30%;}
+ProfileScreen {align:center middle;background:$crown-bg 95%;}
+#profile-box {width:64;max-width:96%;height:auto;max-height:94%;border:round $crown-border;background:$crown-bg-alt;padding:1 3;}
+#profile-kicker {height:1;color:$crown-accent;}
+#profile-title {height:1;margin-top:1;text-style:bold;color:$crown-text;}
+#profile-intro {height:1;color:$crown-text-dim;margin-bottom:1;}
+.profile-label {height:1;margin-top:1;color:$crown-text;}
+#profile-box Input,#profile-box Select {height:3;margin:0;}
+#profile-motion-row {height:3;margin-top:1;align:left middle;}
+#profile-motion-label {width:1fr;height:1;}
+#profile-motion {width:auto;}
+#profile-error {height:auto;color:$crown-error;}
+#profile-save,#profile-cancel {width:100%;height:3;margin-top:1;}
+#profile-save {background:$crown-accent-2;border:none;color:$crown-text;}
+#profile-cancel {background:transparent;border:none;color:$crown-text-dim;}
+
+#profile-shell {width:64;max-width:96%;height:36;max-height:94%;border:round $crown-border;background:$crown-bg-alt;padding:1 2;}
+#profile-box {width:100%;height:1fr;max-width:100%;max-height:100%;border:none;padding:0 1;}
+#profile-actions {height:3;margin-top:1;}
+#profile-save {width:2fr;height:3;margin:0;}
+#profile-cancel {width:1fr;height:3;margin:0;}
+#profile-box Input {border:solid $crown-border;background:$crown-bg;}
+#profile-box Input:focus {border:solid $crown-accent;}
+#edit-header-profile {text-align:left;content-align:left middle;}
+
+#identity {height:100%;}
+
+/* Engraved masthead: one wordmark, one actionable identity, one baseline. */
+#hero,.short #hero {height:6;max-height:30%;border:none;margin:0 2;}
+#identity {height:5;padding:0 1 0 0;margin:0;align:left middle;}
+#dashboard-brand {height:4;width:1fr;margin:0;}
+#brand-caption,.compact #brand-caption {display:none;}
+#hero-right,.short #hero-right,.compact #hero-right {width:25;height:4;margin:0 0 0 2;padding:0 1;border:round $crown-border;background:$crown-bg-alt;}
+#palette-label {height:1;text-align:left;color:$crown-text;}
+#signature {display:none;}
+#edit-header-profile {height:1;margin:0;padding:0;text-align:left;content-align:left middle;color:$crown-accent;}
+#edit-header-profile:hover,#edit-header-profile:focus {background:$crown-accent 12%;color:$crown-text;}
+#signature-rail {dock:bottom;height:1;width:100%;}
+.tiny #hero {height:5;}
+.tiny #identity {height:4;padding:0;}
+.tiny #hero-right {margin-top:0;}
+
+#hero-right,.short #hero-right,.compact #hero-right {width:30;height:5;padding:0 1;}
+#profile-identity-row {height:1;width:100%;}
+#palette-label {width:1fr;height:1;}
+#edit-header-profile {width:10;height:1;text-align:right;content-align:right middle;}
+.community-link {width:100%;min-width:0;height:1;min-height:1;margin:0;padding:0;border:none !important;background:transparent;color:$crown-text-dim;text-align:left;content-align:left middle;}
+.community-link:hover,.community-link:focus {background:$crown-accent 14%;color:$crown-accent;text-style:bold;}
+.tiny #hero-right {height:4;border:none;border-left:solid $crown-border;}
+#hero-right Button, #hero-right Button:focus, #hero-right Button:hover {border:none !important;height:1;min-height:1;padding:0;}
+
+
+#hero-right .community-link {padding:0;margin:0;content-align:left top;text-align:left;}
+
+/* Stable sidebar: reserve scrollbar space and never wrap menu labels. */
+#navigation,.compact #navigation {width:25;}
+#category-scroll {scrollbar-gutter:stable;scrollbar-size-vertical:1;overflow-x:hidden;}
+#navigation .nav-button {text-wrap:nowrap;text-overflow:ellipsis;padding:0 0 0 1;}
+/* Secret doorway: compact control beside the wordmark. */
+#secret-entry {width:5;min-width:5;height:3;margin:0 1;padding:0;border:round $crown-border;background:$crown-bg-alt;color:$crown-accent;content-align:center middle;}
+#secret-entry:hover,#secret-entry:focus {border:round $crown-accent;background:$crown-accent 15%;color:$crown-text;}
+DarkConfirmation {align:center middle;background:$crown-bg 88%;}
+#dark-confirm {width:58;max-width:94%;height:auto;max-height:95%;padding:1 2;border:round $crown-accent;background:$crown-bg-alt;overflow-y:auto;}
+.dark-emblem {height:1;color:$crown-accent;text-align:center;text-style:bold;}
+.dark-kicker {height:1;margin-top:1;color:$crown-text-dim;text-align:center;text-style:bold;}
+#dark-question {height:auto;margin:1 0;color:$crown-text;text-align:center;}
+#dark-actions {height:3;}
+#dark-actions Button {width:1fr;min-width:0;height:3;margin:0;padding:0 1;border:round $crown-border;background:$crown-bg;color:$crown-text;}
+#dark-actions #dark-accept {margin-left:1;background:$crown-accent 15%;color:$crown-accent;}
+#dark-actions Button:hover,#dark-actions Button:focus {border:round $crown-accent;}
+DarkConstruction {align:center middle;background:#090805;}
+#dark-chamber {width:54;max-width:94%;height:auto;max-height:95%;padding:2 3;border:round $crown-border;background:#121009;overflow-y:auto;}
+#dark-divider {height:1;margin:1 0;color:$crown-accent;text-align:center;}
+#dark-title {height:auto;color:$crown-text;text-style:bold;text-align:center;margin-bottom:2;}
+#dark-back {height:3;width:100%;min-width:0;border:round $crown-border;background:transparent;color:$crown-text-dim;}
+#dark-back:hover,#dark-back:focus {border:round $crown-accent;color:$crown-accent;}
+/* ABYSS: breathing accent and engraved lettering, responsive to terminal width. */
+#secret-entry {width:17;min-width:7;height:3;margin:0 1;padding:0 1;text-style:bold;}
+.compact #secret-entry {width:9;margin:0;padding:0 1;}
+/* DARK SIDE portal owns its cell-level frame and lighting. */
+#secret-entry,#secret-entry:hover,#secret-entry:focus {width:23;min-width:13;height:3;margin:0 1;padding:0;border:none !important;background:#0c0a07;color:#edce90;content-align:center middle;text-style:none;}
+.compact #secret-entry {width:15;margin:0;padding:0;}
+#secret-entry {text-wrap:nowrap;}
+DarkAccess {align:center middle;background:$crown-bg 90%;}
+#dark-access {width:50;max-width:94%;height:auto;max-height:95%;padding:1 2;border:round #b99451;background:#121009;overflow-y:auto;}
+#dark-code-label {height:auto;text-align:center;margin:1 0;color:$crown-text;}
+#dark-code {height:3;border:round #514025;background:#0c0a07;color:#f4e4bd;}
+#dark-code:focus {border:round #e2bf79;}
+#dark-code-error {height:auto;min-height:1;color:$crown-error;margin-bottom:1;text-align:center;}
+#dark-actions #dark-unlock {margin-left:1;background:#302513;color:#edce90;}
+#dark-key-help {height:auto;color:$crown-text-dim;text-align:center;margin-bottom:1;}
+#dark-key-links {height:1;margin-bottom:1;}
+#dark-key-links Button {width:1fr;min-width:0;height:1;min-height:1;border:none !important;background:transparent;color:#e1bd78;padding:0;text-align:center;}
+#dark-key-links Button:hover,#dark-key-links Button:focus {background:#302513;color:#fff0d2;}
+/* VIP entrance and access panels share a restrained gold finish. */
+#secret-entry,#secret-entry:hover,#secret-entry:focus {color:#edce90;background:#0c0a07;}
+#dark-confirm,#dark-chamber {border:round #b99451;background:#121009;}
+.dark-emblem,#dark-divider {color:#e2bf79;}
+.dark-kicker {color:#c9ab73;}
+#dark-actions #dark-accept,#dark-actions #dark-unlock {background:#302513;color:#edce90;}
+#dark-actions Button:hover,#dark-actions Button:focus,#dark-back:hover,#dark-back:focus {border:round #e2bf79;color:#f4e4bd;}
+
+/* Premium state: preserves the selected palette and shared layout. */
+.vip-active #hero-right {border:round #702238;background:#160b10;}
+.vip-active #collection-title {color:#ff8ba1;}
+.vip-active #collection-count {color:#ff3452;}
+.vip-active #exit-vip {color:#eaa1b1;}
+.vip-active #footer {border-top:solid #702238;background:#160b10;}
+
+
+/* Release utilities: readable result actions and multiline input. */
+#tool-multiline {height:6;min-height:3;border:round $crown-border;background:$crown-bg;color:$crown-text;}
+#tool-multiline:focus {border:round $crown-accent;}
+#browse-file-btn,#copy-result-btn {height:3;min-height:3;width:28;margin:0 0 0 0;}
+.compact-tool #tool-multiline {height:3;}
+
+#tool-actions {height:3;width:100%;}
+#tool-actions Button {width:1fr;min-width:0;max-width:30;margin-right:1;padding:0;}
+
+/* Option screens only: quiet surfaces, clear action hierarchy and reading rhythm. */
+#tool-toolbar {background:$crown-bg;border:round $crown-border;}
+#screen-title {text-style:bold;}
+#tool-context {color:$crown-text-dim;}
+#run-btn {background:$crown-accent;color:$crown-bg;text-style:bold;}
+#run-btn:hover,#run-btn:focus {background:$crown-accent-2;color:$crown-text;}
+#tool-input,#tool-multiline {background:$crown-bg;}
+#result-scroll {background:$crown-bg;border:round $crown-border;}
+#result-scroll:focus-within {border:round $crown-accent;}
+#copy-result-btn:disabled {color:$crown-text-dim;}
+.tool-footnote {color:$crown-text-dim;}
+
+
+#tool-toolbar #run-btn {background:$crown-accent;color:$crown-bg;text-style:bold;}
+#tool-toolbar #run-btn:hover,#tool-toolbar #run-btn:focus {background:$crown-accent;color:$crown-bg;}
