@@ -1,4 +1,5 @@
 """Resolve packaged dependencies before importing the UI."""
+from pathlib import Path
 import sys
 import os
 import subprocess
@@ -7,7 +8,7 @@ from .constants import APP_DIR, LEGACY_DIR, PROJECT_DIR
 def bootstrap():
     # Direct `python main.py` uses the same dedicated runtime as start.bat.
     local_python=PROJECT_DIR/'.venv'/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
-    if sys.prefix==sys.base_prefix and local_python.is_file():
+    if sys.prefix==sys.base_prefix and local_python.is_file() and Path(sys.executable).resolve()!=local_python.resolve():
         try:
             probe = subprocess.run(
                 [str(local_python), '-c', 'import sys; sys.exit(0 if sys.version_info >= (3,12) else 1)'],

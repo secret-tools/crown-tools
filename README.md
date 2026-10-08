@@ -42,10 +42,10 @@ Check a file’s metadata, untangle JSON, find duplicate files or inspect a doma
 
 ## Start in three steps
 
-**You need Windows and Python 3.12 or newer.** An internet connection is required to install dependencies and use online lookups.
+**You need 64-bit Windows and an internet connection for the first installation.** Setup finds a compatible Python automatically or downloads a verified portable Python runtime from python.org. No manual Python, Rust or Visual Studio installation is required.
 
 1. If you already have a source archive whose origin and code you have reviewed, **extract it completely**.
-2. Run **`setup.bat`** to create the environment and install dependencies.
+2. Run **`setup.bat`** and wait for the installation to finish. It prepares Python and installs prebuilt dependencies automatically.
 3. Run **`start.bat`** to open Crown Tools.
 
 | First time | Every time after |

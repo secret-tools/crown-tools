@@ -25,3 +25,5 @@ Input/*
 !Input/README.md
 Output/*
 !Output/README.md
+.python-download/
+.venv-backup-*/

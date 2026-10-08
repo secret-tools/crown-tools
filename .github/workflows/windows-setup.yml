@@ -1,0 +1,54 @@
+name: Windows setup
+on:
+  push:
+    paths: ['Crown/**', 'setup.bat', 'start.bat', '.github/workflows/windows-setup.yml']
+  pull_request:
+    paths: ['Crown/**', 'setup.bat', 'start.bat', '.github/workflows/windows-setup.yml']
+jobs:
+  setup:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          architecture: x64
+      - name: Create environment using the selected Python
+        run: python -m venv .venv
+      - name: Install and repeat setup
+        shell: powershell
+        run: |
+          & .\Crown\lib\launch.ps1 -Setup
+          if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
+      - name: Verify repeated setup and interface
+        shell: powershell
+        run: |
+          & .\Crown\lib\launch.ps1 -Setup
+          if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
+          & .\.venv\Scripts\python.exe .\Crown\scripts\test_setup.py
+          exit $LASTEXITCODE
+  portable:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install without system Python
+        shell: powershell
+        run: |
+          function Get-Command {
+            param([string]$Name)
+            if ($Name -in @('py','python')) {return $null}
+            Microsoft.PowerShell.Core\Get-Command $Name
+          }
+          & .\Crown\lib\launch.ps1 -Setup
+          exit $LASTEXITCODE
+      - name: Verify portable runtime and repeated setup
+        shell: powershell
+        run: |
+          & .\Crown\lib\launch.ps1 -Setup
+          if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
+          & .\.venv\Scripts\python.exe .\Crown\scripts\test_setup.py
+          exit $LASTEXITCODE

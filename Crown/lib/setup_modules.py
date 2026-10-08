@@ -6,13 +6,15 @@ MODULES=('textual','rich','pyfiglet','psutil','arabic_reshaper','bidi','PIL','nu
 
 def dependencies_ready(requirements):
     try:
-        for line in requirements.read_text(encoding='utf-8').splitlines():
+        for line in requirements.read_text(encoding='utf-8-sig').splitlines():
             line=line.strip()
             if not line or line.startswith('#'):continue
             name,expected=line.split('==',1)
             if importlib.metadata.version(name)!=expected:return False
-        return all(importlib.util.find_spec(name) is not None for name in MODULES)
-    except (OSError,ValueError,ImportError,importlib.metadata.PackageNotFoundError):return False
+        for name in MODULES:
+            importlib.import_module(name)
+        return True
+    except (OSError,ValueError,ImportError,RuntimeError,importlib.metadata.PackageNotFoundError):return False
 
 def install(requirements):
     log_dir=Path(os.environ.get('LOCALAPPDATA',tempfile.gettempdir()))/'CrownTools'/'logs'
@@ -28,7 +30,7 @@ def install(requirements):
     worker.start()
     try:
         with log_path.open('w',encoding='utf-8') as log:
-            result=subprocess.run([sys.executable,'-m','pip','install','--disable-pip-version-check','--no-compile','--prefer-binary','--no-input','--timeout','30','--retries','2','-r',str(requirements)],stdout=log,stderr=subprocess.STDOUT)
+            result=subprocess.run([sys.executable,'-m','pip','install','--disable-pip-version-check','--no-compile','--only-binary=:all:','--no-input','--timeout','30','--retries','2','-r',str(requirements)],stdout=log,stderr=subprocess.STDOUT)
     finally:
         finished.set()
         worker.join()

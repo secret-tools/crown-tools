@@ -4,7 +4,7 @@ rich==15.0.0
 pyfiglet==1.0.4
 psutil==7.2.2
 arabic-reshaper==3.0.0
-python-bidi==0.6.6
+python-bidi==0.6.11
 pillow==12.3.0
 numpy==2.5.3
 qrcode==8.2
